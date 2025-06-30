@@ -1,0 +1,52 @@
+# ========== Python & Django ==========
+__pycache__/
+*.py[cod]
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.bak
+
+# Virtual environment
+env/
+venv/
+ENV/
+.venv/
+.venv.bak/
+.env
+.env.*
+
+# Django migration cache only (not actual migrations)
+**/migrations/__pycache__/
+**/migrations/*.pyc
+
+# ========== Static & Media Files ==========
+# Keep media files tracked since you want to avoid errors
+# Static is auto-collected on build (ignore)
+static/
+staticfiles/
+
+# ========== Node / React / Vite ==========
+node_modules/
+frontend-src/node_modules/
+frontend-src/dist/
+frontend-src/.vite/
+frontend-src/.env
+
+# Vite build output (Django reads from here after build)
+# You can comment this out if you're not rebuilding on production
+backend/frontend/assets/
+backend/frontend/.vite/
+
+# ========== OS & Editor Junk ==========
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
