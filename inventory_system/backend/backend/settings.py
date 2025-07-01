@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     
     'rest_framework',
     'corsheaders',
+    'rest_framework.authtoken',
     'api.apps.ApiConfig',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -139,6 +141,19 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 TEMPLATES[0]['DIRS'] = [os.path.join(BASE_DIR, 'frontend')]
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'frontend', 'assets')]
+
+AUTH_USER_MODEL = 'users.CustomUser'
+
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+}
 
 
 

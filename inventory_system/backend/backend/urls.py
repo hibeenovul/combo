@@ -20,6 +20,6 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-  #  path('api/', include('api.urls')),  # this will be your backend API routes
+    path('api/users/', include('users.urls')),  # this will be your backend API routes
     path('', TemplateView.as_view(template_name="index.html")),  # serves React
 ]
