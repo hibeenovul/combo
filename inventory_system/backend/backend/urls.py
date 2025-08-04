@@ -15,11 +15,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/users/', include('users.urls')),  # this will be your backend API routes
     path('', TemplateView.as_view(template_name="index.html")),  # serves React
+    path('api/inventory/', include('inventory.urls')),  # inventory API routes
+    
+     # Catch-all for frontend React routes (e.g. /login, /dashboard, etc.)
+    re_path(r'^.*$', TemplateView.as_view(template_name="index.html")),
 ]

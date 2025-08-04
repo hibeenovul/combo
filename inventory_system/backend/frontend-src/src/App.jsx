@@ -1,17 +1,17 @@
-import { useState } from 'react'
-import './App.css'
+import { Routes, Route } from 'react-router-dom'
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 function App() {
 
 
   return (
-    <>
-      <div>
-        <h1 style={{ color: "green", fontSize: "2rem" }}>🚀 Hello Ibrahim!</h1>
-        <p>This is your React app served through Django!</p>
-      </div>
-    </>
-  );
+   <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+   </Routes>   
+  )
 }
 
 export default App;
