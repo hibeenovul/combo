@@ -3,7 +3,7 @@
 pip install -r requirements.txt
 
 # Istall frontend dependencies and build
-cd backend/frontend-src
+cd backend-src/frontend-src
 npm install
 npm run build
 cd ../..
