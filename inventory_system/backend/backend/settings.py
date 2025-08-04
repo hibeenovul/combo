@@ -44,9 +44,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'rest_framework.authtoken',
-    'api.apps.ApiConfig',
-    'users.apps.UsersConfig',
-    'inventory.apps.InventoryConfig',
+    'backend.api.apps.ApiConfig',
+    'backend.users.apps.UsersConfig',
+    'backend.inventory.apps.InventoryConfig',
 ]
 
 MIDDLEWARE = [
